@@ -6,7 +6,6 @@
 
 - name: Postgresql
   hosts: appdbs
-  ansible_become: true
   roles:
     - postgres
 
