@@ -1,0 +1,24 @@
+---
+- name: Init Setup
+  hosts: all
+  roles: 
+    - setup
+
+- name: Postgresql
+  hosts: appdbs
+  roles:
+    - postgres
+
+- name: Apache
+  hosts: apps
+  roles:
+    - tomcat
+    - apache
+    - htmlapp
+
+- name: HAProxy
+  hosts: frontends
+  roles:
+    - haproxy
+
+
