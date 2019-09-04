@@ -1,4 +1,9 @@
 ---
+- name: Retrieve VM list
+  hosts: localhost
+  roles:
+    - ospinventory
+    
 - name: Init Setup
   hosts: all
   roles: 
